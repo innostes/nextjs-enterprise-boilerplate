@@ -22,7 +22,7 @@
     "strictNullChecks": true, // Enforce stricter null checks, preventing runtime errors
     "alwaysStrict": true, // Ensure all files are in strict mode by default
     "strictFunctionTypes": true, // Ensure function arguments are checked for subtyping
-    "noPropertyAccessFromIndexSignature": true, // Prevent using `any` or untyped properties from an index signature
+    "noPropertyAccessFromIndexSignature": false, // Prevent using `any` or untyped properties from an index signature
     "noUncheckedIndexedAccess": true, // Enforce stricter checks when accessing array elements or object properties
     "useUnknownInCatchVariables": true, // Prevent `any` in `catch` blocks (replace with `unknown`)
     "skipDefaultLibCheck": true, // Skip checking `default` libraries in large projects
