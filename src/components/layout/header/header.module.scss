@@ -2,9 +2,14 @@ $font-size: 14px;
 $font-weight: 500;
 $hover-weight: 600;
 $text-type: uppercase;
+$header-background: var(--primary-color);
+$menu-primary-text-color: var(--white-color);
+$submenu-text-color: var(--secondary-color);
+$submenu-bg-color: var(--white-color);
+$letter-spacing: 0.05em;
 
 .header {
-  background: var(--primary-color);
+  background: $header-background;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -46,19 +51,11 @@ $text-type: uppercase;
 
 .menu a {
   text-decoration: none;
-  color: var(--white-color);
+  color: $menu-primary-text-color;
   font-size: $font-size;
   font-weight: $font-weight;
   text-transform: $text-type;
-}
-
-.dropdownMenu {
-  display: none;
-  position: absolute;
-  background: #fff;
-  list-style: none;
-  padding: 10px;
-  color: #000;
+  letter-spacing: $letter-spacing;
 }
 
 .dropdown:hover .dropdownMenu {
@@ -72,6 +69,7 @@ $text-type: uppercase;
   font-size: 24px;
   cursor: pointer;
   margin-left: 20px;
+  color: $menu-primary-text-color;
 }
 
 @media (max-width: 768px) {
@@ -82,7 +80,6 @@ $text-type: uppercase;
   .nav {
     display: none;
     flex-direction: column;
-    background: #fff;
     position: absolute;
     top: 52px;
     width: 100%;
@@ -113,18 +110,19 @@ $text-type: uppercase;
   cursor: pointer;
   background: none; /* Removes button background */
   border: none; /* Removes button border */
-  color: var(--white-color);
+  color: $menu-primary-text-color;
   font-size: $font-size;
   font-weight: $font-weight;
   transition: font-weight 0.2s ease-in-out;
   text-transform: $text-type;
   font-family: var(--font-family);
+  letter-spacing: $letter-spacing;
 }
 
 @media (max-width: 769px) {
   .dropdownToggle,
   .menu a {
-    color: #000;
+    color: $submenu-text-color;
   }
 }
 
@@ -150,11 +148,15 @@ $text-type: uppercase;
 }
 
 .dropdownMenu {
+  display: none;
+  position: absolute;
+  background: $submenu-bg-color;
+  list-style: none;
   padding: 0px 10px 0px 20px;
   li {
     line-height: 25px;
     a {
-      color: #000;
+      color: $submenu-text-color;
     }
   }
 }
