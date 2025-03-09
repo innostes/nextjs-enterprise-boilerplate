@@ -1,8 +1,9 @@
 'use client';
+import { getCompleteJsonLdForBusiness } from '@/seo';
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from './header.module.scss';
 import { FaAngleDown } from 'react-icons/fa6';
+import styles from './header.module.scss';
 
 const menuItems = [
   { label: 'Home', hasSubMenu: false, link: '/' },
@@ -30,6 +31,13 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getCompleteJsonLdForBusiness()),
+        }}
+      />
+
       <div className={styles.container}>
         {/* LOGO */}
         <div className={styles.logo}>
@@ -48,7 +56,7 @@ const Header: React.FC = () => {
         <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.show : ''}`}>
           <ul className={styles.menu}>
             {menuItems.map((item, index) => (
-              <li key={item.label+"-"+index} className={item.hasSubMenu ? styles.dropdown : ''}>
+              <li key={item.label + '-' + index} className={item.hasSubMenu ? styles.dropdown : ''}>
                 {item.hasSubMenu ? (
                   <>
                     <button className={styles.dropdownToggle} onClick={() => toggleDropdown(index)}>

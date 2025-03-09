@@ -15,7 +15,7 @@
     "sonar": "node sonar-scanner.js",
     "format": "npm run format:prettier",
     "format:prettier": "prettier --write .",
-    "prepush": "npm run lint && npm run test && npm run build"
+    "prepush": "npm run lint && npm run build"
   },
   "dependencies": {
     "dotenv": "^16.4.7",

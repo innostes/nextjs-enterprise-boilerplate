@@ -1,194 +1,257 @@
-/* Grid container to hold the rows */
+/* Container (Bootstrap-like) */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* Row: Used to group columns */
+/* Responsive container breakpoints */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Grid System */
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
   margin-right: -15px;
+  margin-left: -15px;
 }
 
-/* Column: Defines the size of the column based on the available grid system */
-.col,
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  padding-left: 15px;
+[class^="col-"] {
   padding-right: 15px;
-  box-sizing: border-box;
+  padding-left: 15px;
+  flex: 1 1 100%;
 }
 
-/* Specific column widths (12 columns total, based on flexbox) */
+/* Column widths */
 .col-1 {
   flex: 0 0 8.33%;
+  max-width: 8.33%;
 }
 .col-2 {
   flex: 0 0 16.66%;
+  max-width: 16.66%;
 }
 .col-3 {
   flex: 0 0 25%;
+  max-width: 25%;
 }
 .col-4 {
   flex: 0 0 33.33%;
+  max-width: 33.33%;
 }
 .col-5 {
   flex: 0 0 41.66%;
+  max-width: 41.66%;
 }
 .col-6 {
   flex: 0 0 50%;
+  max-width: 50%;
 }
 .col-7 {
   flex: 0 0 58.33%;
+  max-width: 58.33%;
 }
 .col-8 {
   flex: 0 0 66.66%;
+  max-width: 66.66%;
 }
 .col-9 {
   flex: 0 0 75%;
+  max-width: 75%;
 }
 .col-10 {
   flex: 0 0 83.33%;
+  max-width: 83.33%;
 }
 .col-11 {
   flex: 0 0 91.66%;
+  max-width: 91.66%;
 }
 .col-12 {
   flex: 0 0 100%;
+  max-width: 100%;
 }
 
-/* Responsive grid: You can specify different column sizes at different breakpoints */
-
-/* Small devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+/* Responsive column classes */
+@media (min-width: 576px) {
   .col-sm-1 {
     flex: 0 0 8.33%;
+    max-width: 8.33%;
   }
   .col-sm-2 {
     flex: 0 0 16.66%;
+    max-width: 16.66%;
   }
   .col-sm-3 {
     flex: 0 0 25%;
+    max-width: 25%;
   }
   .col-sm-4 {
     flex: 0 0 33.33%;
+    max-width: 33.33%;
   }
   .col-sm-5 {
     flex: 0 0 41.66%;
+    max-width: 41.66%;
   }
   .col-sm-6 {
     flex: 0 0 50%;
+    max-width: 50%;
   }
   .col-sm-7 {
     flex: 0 0 58.33%;
+    max-width: 58.33%;
   }
   .col-sm-8 {
     flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
   .col-sm-9 {
     flex: 0 0 75%;
+    max-width: 75%;
   }
   .col-sm-10 {
     flex: 0 0 83.33%;
+    max-width: 83.33%;
   }
   .col-sm-11 {
     flex: 0 0 91.66%;
+    max-width: 91.66%;
   }
   .col-sm-12 {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) {
   .col-md-1 {
     flex: 0 0 8.33%;
+    max-width: 8.33%;
   }
   .col-md-2 {
     flex: 0 0 16.66%;
+    max-width: 16.66%;
   }
   .col-md-3 {
     flex: 0 0 25%;
+    max-width: 25%;
   }
   .col-md-4 {
     flex: 0 0 33.33%;
+    max-width: 33.33%;
   }
   .col-md-5 {
     flex: 0 0 41.66%;
+    max-width: 41.66%;
   }
   .col-md-6 {
     flex: 0 0 50%;
+    max-width: 50%;
   }
   .col-md-7 {
     flex: 0 0 58.33%;
+    max-width: 58.33%;
   }
   .col-md-8 {
     flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
   .col-md-9 {
     flex: 0 0 75%;
+    max-width: 75%;
   }
   .col-md-10 {
     flex: 0 0 83.33%;
+    max-width: 83.33%;
   }
   .col-md-11 {
     flex: 0 0 91.66%;
+    max-width: 91.66%;
   }
   .col-md-12 {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) {
   .col-lg-1 {
     flex: 0 0 8.33%;
+    max-width: 8.33%;
   }
   .col-lg-2 {
     flex: 0 0 16.66%;
+    max-width: 16.66%;
   }
   .col-lg-3 {
     flex: 0 0 25%;
+    max-width: 25%;
   }
   .col-lg-4 {
     flex: 0 0 33.33%;
+    max-width: 33.33%;
   }
   .col-lg-5 {
     flex: 0 0 41.66%;
+    max-width: 41.66%;
   }
   .col-lg-6 {
     flex: 0 0 50%;
+    max-width: 50%;
   }
   .col-lg-7 {
     flex: 0 0 58.33%;
+    max-width: 58.33%;
   }
   .col-lg-8 {
     flex: 0 0 66.66%;
+    max-width: 66.66%;
   }
   .col-lg-9 {
     flex: 0 0 75%;
+    max-width: 75%;
   }
   .col-lg-10 {
     flex: 0 0 83.33%;
+    max-width: 83.33%;
   }
   .col-lg-11 {
     flex: 0 0 91.66%;
+    max-width: 91.66%;
   }
   .col-lg-12 {
     flex: 0 0 100%;
+    max-width: 100%;
   }
 }
