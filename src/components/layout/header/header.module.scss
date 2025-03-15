@@ -2,10 +2,16 @@ $font-size: 14px;
 $font-weight: 500;
 $hover-weight: 600;
 $text-type: uppercase;
+// main header bg after scroll effect if scroll based theme change is applied
 $header-background: var(--primary-color);
 $menu-primary-text-color: var(--white-color);
+//initial header bg before scroll if scroll based theme change is applied
+$scroll-header-background: var(--secondary-color);
+$scroll-menu-primary-text-color: #000;
+//nested menu style
 $submenu-text-color: var(--secondary-color);
 $submenu-bg-color: var(--white-color);
+//header menu item text spacing
 $letter-spacing: 0.05em;
 
 .header {
@@ -199,4 +205,14 @@ $letter-spacing: 0.05em;
 
 .m-top {
   padding-top: 16px;
+}
+
+.scroll-theme {
+  .header {
+    background: $scroll-header-background;
+  }
+  .dropdownToggle,
+  .menu a {
+    color: $scroll-menu-primary-text-color;
+  }
 }

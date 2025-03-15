@@ -3,7 +3,12 @@
   --primary-color: #00a8ec;
   --secondary-color: #000000;
   --white-color: #ffffff;
+  --border-radius: 8px;
   font-family: Poppins, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
