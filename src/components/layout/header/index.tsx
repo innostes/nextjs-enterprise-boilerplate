@@ -46,12 +46,7 @@ const Header: React.FC = () => {
   return (
     // remove class with scroll-theme logic to disable scrollbased header change
     <header className={!isScrolled?styles['scroll-theme']:''}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getCompleteJsonLdForBusiness()),
-        }}
-      />
+    
       <div className={styles.header}>
         <div className={styles.container}>
           {/* LOGO */}
